@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Javascript</title>
+</head>
+<body>
+    <h1>Rahul Kumar</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    // setTimeOut() is a function that also call api under window object
+     // it is not core javascript part
+
+    //  setTimeout(function (){
+    //     console.log("Rahul Kumar")
+    //  },2000)
+
+    const timeOut = function (){
+        console.log("Rahul Kumar")
+    }
+    setTimeout(timeOut,2000)
+
+    const textChange = function () {
+        document.querySelector('h1').innerHTML = "Javascript Course"
+    }
+
+    const changeMe = setTimeout(textChange,4000)
+
+    // cleartimeout is function to stop the settimeout function from execution
+    // we have to pass the refrence of settimeout function to stop the particular function
+
+    document.querySelector('#stop').addEventListener('click',function (){
+        clearTimeout(changeMe)
+        console.log("Stopped")
+    })
+
+</script>
+</html>

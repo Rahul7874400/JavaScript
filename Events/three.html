@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>Code with Rahul Kumar</h1>
+
+    <button class="start">start</button>
+    <button class="stop">Stop</button>
+</body>
+
+<script>
+    // setInterval function work same as setTimeout but it repeates in every interval
+    // setInterval(function (){
+    //     console.log("Rahul Kumar",Date.now())
+    // },2000)
+
+    const fun = function() {
+        console.log("Rahul",Date.now())
+    }
+    // const interval = setInterval(fun,2000,"Hi")
+
+    // clearInterval(interval)
+
+    let interval 
+
+    document.querySelector('.start').addEventListener('click',function() {
+        interval = setInterval(fun,2000)
+    })
+   
+    document.querySelector('.stop').addEventListener('click',function() {
+        clearInterval(interval)
+    })
+
+
+</script>
+</html>
